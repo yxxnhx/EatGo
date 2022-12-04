@@ -6,6 +6,8 @@ API를 이용하여 지역과 카테고리를 선택하면 해당하는 레스�
 
 ## 📎 배포 사이트
 
+https://eatgo.netlify.app/
+
 <br />
 
 ## 🚀 프로젝트 실행 방법
@@ -13,6 +15,15 @@ API를 이용하여 지역과 카테고리를 선택하면 해당하는 레스�
 ```
 npm install
 npm start
+```
+
+<br />
+
+## 👤 사용자 정보
+
+```
+id : tester@example.com
+password : test
 ```
 
 <br />
