@@ -30,6 +30,7 @@ export default function LoginFormContainer() {
   };
 
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {accessToken ? (
         <LogoutForm onClick={handleClickLogout} />

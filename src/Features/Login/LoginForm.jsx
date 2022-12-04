@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 import { memo } from 'react';
 
 import styled from '@emotion/styled';

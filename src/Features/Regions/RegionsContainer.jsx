@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
