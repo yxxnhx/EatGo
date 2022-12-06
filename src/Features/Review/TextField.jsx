@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
 import styled from '@emotion/styled';
 
 const InputBox = styled.div`

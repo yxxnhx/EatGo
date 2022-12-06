@@ -1,4 +1,5 @@
-/* eslint-disable no-nested-ternary */
+import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import styled from '@emotion/styled';
@@ -66,11 +67,11 @@ export default function CategoriesContainer() {
               <FontAwesomeIcon icon={categoryLogo[category.name]} />
               <CategoryItem>
                 {category.name}
-                {
-                  selectedCategory
-                    ? (category.id === selectedCategory.id ? '(V)' : null)
-                    : null
-                }
+                {selectedCategory ? (
+                  <span>
+                    {category.id === selectedCategory.id ? '(V)' : null}
+                  </span>
+                ) : null}
               </CategoryItem>
             </button>
           </MenuItem>
