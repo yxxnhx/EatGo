@@ -37,9 +37,9 @@ export default function RegionsContainer() {
             >
               {region.name}
               {selectedRegion ? (
-                <div>
+                <>
                   {region.id === selectedRegion.id ? '(V)' : null}
-                </div>
+                </>
               ) : null}
             </button>
           </MenuItem>

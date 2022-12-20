@@ -1,8 +1,6 @@
-import React from 'react';
-
 import {
+  Switch,
   Route,
-  Routes,
 } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
@@ -33,14 +31,14 @@ export default function App() {
     <div>
       <Global styles={reset} />
       <Header />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/restaurants" element={<RestaurantsPage />} />
-        <Route path="/restaurants/:id" element={<RestaurantPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route exact path="/restaurants" component={RestaurantsPage} />
+        <Route path="/restaurants/:id" component={RestaurantPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
     </div>
   );
 }

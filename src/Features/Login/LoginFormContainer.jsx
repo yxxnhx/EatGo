@@ -30,7 +30,7 @@ export default function LoginFormContainer() {
   };
 
   return (
-    <div>
+    <>
       {accessToken ? (
         <LogoutForm onClick={handleClickLogout} />
       ) : (
@@ -40,6 +40,6 @@ export default function LoginFormContainer() {
           onSubmit={handleSubmit}
         />
       )}
-    </div>
+    </>
   );
 }

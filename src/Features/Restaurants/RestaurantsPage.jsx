@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
@@ -73,7 +73,7 @@ const Container = styled.div({
 });
 
 export default function RestaurantsPage() {
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const dispatch = useDispatch();
 
@@ -83,7 +83,7 @@ export default function RestaurantsPage() {
 
   function handleClickRestaurant(restaurant) {
     const url = `/restaurants/${restaurant.id}`;
-    navigate(url);
+    history.push(url);
   }
 
   return (

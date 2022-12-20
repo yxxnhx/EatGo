@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 
 import styled from '@emotion/styled';
@@ -68,9 +66,9 @@ export default function CategoriesContainer() {
               <CategoryItem>
                 {category.name}
                 {selectedCategory ? (
-                  <span>
+                  <>
                     {category.id === selectedCategory.id ? '(V)' : null}
-                  </span>
+                  </>
                 ) : null}
               </CategoryItem>
             </button>
