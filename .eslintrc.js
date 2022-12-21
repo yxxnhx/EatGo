@@ -50,4 +50,18 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },
+  eslintConfig: {
+    extends: ['react-app'],
+    rules: {
+      'no-unused-vars': 'warn',
+    },
+    overrides: [
+      {
+        files: ['**/*.ts?(x)'],
+        rules: {
+          'max-len': 'warn',
+        },
+      },
+    ],
+  },
 };
