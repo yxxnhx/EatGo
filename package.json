@@ -10,8 +10,7 @@
     "test:e2e": "codeceptjs run --steps",
     "test": "npm run coverage && start-server-and-test start http://localhost:8080 test:e2e",
     "lint": "eslint --ext js,jsx .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
