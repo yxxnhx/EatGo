@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import SlideContainer from './SlideContainer';
 import { buttonStyle, containerStyle } from '../../styles/commonStyle';
 import Background from '../../styles/Background';
-import Header from '../../Components/Header';
 
 const Container = styled.div({
   ...containerStyle,
@@ -22,6 +21,7 @@ const Main = styled.div({
     fontSize: '3.5rem',
     fontWeight: '400',
     padding: '1rem 0',
+    lineHeight: '1.5'
   },
 
   '& h1': {
@@ -47,9 +47,6 @@ const Transparent = styled.div({
 export default function HomePage() {
   return (
     <Background>
-      <Transparent>
-        <Header />
-      </Transparent>
       <Container>
         <Main>
           <h2>솔직한 리뷰, 믿을 수 있는 평점</h2>
