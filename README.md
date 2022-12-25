@@ -1,87 +1,78 @@
-# 레스토랑 앱 꾸미기
+# Eat-go
 
-리덕스 툴킷을 이용해서 액션 크리에이터에서 발생하는 중복을 제거하고, Emotion을 이용해 꾸며주세요. 그리고 최적화를 진행해 주세요. 하지만 너무 이른 초기화는 좋지 않으니 주의하셔야 합니다.
+## 🌱 프로젝트 소개
 
-## 과제 목표
+API를 이용하여 지역과 카테고리를 선택하면 해당하는 레스토랑이 출력되며 리뷰를 남길 수 있는 웹 어플리케이션을 구현하였습니다
 
-- Redux toolkit을 사용하여 중복 코드 제거하기
-- Emotion을 이용하여 꾸미기
-- UseCallback을 이용하여 성능 최적화하기
-- React.memo를 이용해서 성능 최적화하기
+## 📎 배포 사이트
 
-## 요구 사항
+https://eatgo.netlify.app/
 
-- ESLint를 돌린 결과 아무런 문제가 없어야 합니다.
-- 모든 인수 테스트를 통과시켜야 합니다.
-- 한 파일에는 하나의 컴포넌트만 있어야 합니다.
-- 테스트 커버리지 100%를 달성해야 합니다.
+<br />
 
-## 제한 조건
+## 🚀 프로젝트 실행 방법
 
-- 모든 기능은 TDD로 구현합니다. 컴포넌트와 reducer에 대한 테스트가 존재해야 합니다. 먼저 테스트를 추가하고 commit 한 뒤 실제 기능을 추가하고 commit합니다. commit 메시지 로그는 아래와 같이 남아야 합니다.
-
-> Restaurant에 대한 테스트를 추가한다
->
-> Restaurant을 구현한다
->
-> Restaurant를 리팩토링한다
->
-> ...
-
-* `if`는 사용할 수 있어도 `else` 사용하실 수 없습니다. `GuardClauses` 방법을 사용해주세요.
-* `switch`는 사용하실 수 없습니다.
-* `let`은 사용하실 수 없습니다. `const`만을 사용하여 문제를 해결해주세요.
-* 함수 이름과 변수 이름에 줄임말은 사용하실 수 없습니다. 길더라도 명확하게 써주세요.
-* indent(인덴트, 들여쓰기) depth를 1로 유지해주세요.
-예를 들어, for문 안에 if문이 있으면 indent depth는 2입니다.
-depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 됩니다.
-
-## 설치하기
-
-```bash
-npm install
 ```
-
-## 실행하기
-
-```bash
+npm install
 npm start
 ```
 
-자동으로 브라우저가 켜지지는 않으니 브라우저에 `http://localhost:8080`을 입력하여 접속해 주세요.  
+<br />
 
-만약 현재 컴퓨터에서 이미 `8080`이라는 포트를 사용하고 있다면 `8081`으로 실행이 될 수도 있어요. 만약 `8081`도 사용하고 있으면 `8082`, `8083` ... 순서대로 찾아서 만들어집니다.
+## 👤 사용자 정보
 
-## 린트 실행하기
-
-```bash
-npm run lint
+```
+id : tester@example.com
+password : test
 ```
 
-## 테스트 실행하기
+<br />
 
-### 전체 테스트 실행하기
+## 📅 프로젝트 기간
 
-```bash
-npm test
-```
+22.11.12 ~ 22.12.02
 
-### 유닛 테스트 실행하기
+<br />
 
-```bash
-npm run test:unit
+## 🏹 SKILLS & TOOLS
 
-# 파일이 저장됐을 때 자동으로 테스트 실행하기
-npm run test:unit -- --watch-all
+- React
+- Redux
+- Jest
+- React Testing library
+- Emotion
 
-# 커버리지 출력하기
-npm run coverage
-```
+<br />
 
-### e2e 테스트 실행하기
+## 📌 주요 기능
 
-서버가 실행중인 상태에서 테스트를 실행해야 합니다.
+- 로그인
+  ![Dec-04-2022 17-36-25](https://user-images.githubusercontent.com/50559373/205542942-41223cd0-448f-4b52-8413-812335587bb4.gif)
 
-```bash
-npm run test:e2e
-```
+API와 통신하여 accessToken을 받아 로그인할 시에만 리뷰를 남길 수 있는 권한을 주었습니다.
+로그인 유지는 localStorage에 accessToken을 저장하여 새로고침을 하여도 로그인이 되도록 하였으며 로그아웃 시, 저장된 accessToken이 삭제되도록 하였습니다
+
+<br />
+
+- 레스토랑 조회
+  ![Dec-04-2022 17-34-50](https://user-images.githubusercontent.com/50559373/205542975-55f61a3e-68d2-4408-8bb9-cc7cee8d2beb.gif)
+
+API를 이용하여 지역과 카테고리를 선택하면 그에 맞는 레스토랑 목록이 조회됩니다.
+async await을 이용하여 해당하는 데이터만 맞게 나올 수 있도록 하였습니다.
+
+<br />
+
+- 리뷰 남기기
+  ![Dec-04-2022 17-35-25](https://user-images.githubusercontent.com/50559373/205543021-2af88bb4-147f-4ff5-9142-74a53a6d5da9.gif)
+
+로그인 시에만 리뷰를 남길 수 있도록 삼항연산자를 이용하여 accessToken이 있을 경우에만 ReviewForm이 나오도록 하였습니다.
+평점과 리뷰를 남길 수 있으며 리뷰 남기기를 클릭 시 입력한 리뷰가 최상단에 뜨도록 하였습니다.
+또한 입력한 리뷰의 평점이 실시간으로 집계 되어 평점에 반영되도록 하였습니다.
+
+<br />
+
+- 슬라이드
+  ![Dec-02-2022 20-56-48](https://user-images.githubusercontent.com/50559373/205543065-5628e490-4349-482b-bb7d-abfb11060594.gif)
+
+라이브러리를 사용하지 않고 순수하게 useState, setInterval을 이용하여 만들었습니다.
+2.5초마다 elementLength씩 올라갈 수 있게 하였으며 스타일링은 전체적으로 emotion을 활용하였습니다.
